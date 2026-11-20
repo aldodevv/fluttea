@@ -1,0 +1,55 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Fluttea: Codegen (Pigeon + Build Runner)",
+      "type": "shell",
+      "command": "fvm dart run pigeon --input packages/fluttea_security/pigeons/security_api.dart && fvm dart run build_runner build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Fluttea: Security Audit",
+      "type": "shell",
+      "command": "./tool/security_audit.sh",
+      "problemMatcher": []
+    },
+    {
+      "label": "Fluttea: Run All Tests",
+      "type": "shell",
+      "command": "fvm flutter test",
+      "options": {
+        "env": {
+          "TOOLCHAINS": "com.apple.dt.toolchain.XcodeDefault"
+        }
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Fluttea: Build Prod APK (Obfuscated)",
+      "type": "shell",
+      "command": "fvm flutter build apk --release --flavor prod -t lib/main_prod.dart --obfuscate --split-debug-info=build/symbols",
+      "options": {
+        "env": {
+          "TOOLCHAINS": "com.apple.dt.toolchain.XcodeDefault"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Fluttea: Build Prod AAB (Obfuscated)",
+      "type": "shell",
+      "command": "fvm flutter build appbundle --release --flavor prod -t lib/main_prod.dart --obfuscate --split-debug-info=build/symbols",
+      "options": {
+        "env": {
+          "TOOLCHAINS": "com.apple.dt.toolchain.XcodeDefault"
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}
+

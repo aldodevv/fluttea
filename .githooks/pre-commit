@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(git rev-parse --show-toplevel)"
+cd "$ROOT_DIR"
+
+if ! command -v fvm >/dev/null 2>&1; then
+  echo "ERROR: fvm tidak ditemukan. Install FVM dulu agar versi Flutter seragam (.fvmrc)."
+  exit 1
+fi
+
+STAGED_DART=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.dart$' || true)
+
+if [ -n "$STAGED_DART" ]; then
+  echo "[pre-commit] Checking Dart format (max line 100)..."
+  # shellcheck disable=SC2086
+  fvm dart format --output=none --set-exit-if-changed $STAGED_DART
+
+  echo "[pre-commit] Running dart analyze..."
+  fvm dart analyze
+
+  echo "[pre-commit] Checking UI rules..."
+  ./tool/check_ui_rules.sh
+fi
+
+if command -v gitleaks >/dev/null 2>&1; then
+  echo "[pre-commit] Scanning staged changes with gitleaks..."
+  gitleaks protect --staged --no-banner
+fi
+

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(git rev-parse --show-toplevel)"
+cd "$ROOT_DIR"
+
+if ! command -v fvm >/dev/null 2>&1; then
+  echo "ERROR: fvm tidak ditemukan. Install FVM dulu agar versi Flutter seragam (.fvmrc)."
+  exit 1
+fi
+
+EXPECTED_FLUTTER=$(sed -n 's/.*"flutter"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' .fvmrc)
+ACTUAL_FLUTTER=$(fvm flutter --version --machine 2>/dev/null | sed -n 's/.*"frameworkVersion"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' || true)
+
+if [ -n "$EXPECTED_FLUTTER" ] && [ -n "$ACTUAL_FLUTTER" ] && [ "$EXPECTED_FLUTTER" != "$ACTUAL_FLUTTER" ]; then
+  echo "ERROR: Versi Flutter ($ACTUAL_FLUTTER) tidak sesuai .fvmrc ($EXPECTED_FLUTTER). Jalankan: fvm install && fvm use"
+  exit 1
+fi
+
+echo "[pre-push] Checking Dart format..."
+fvm dart format --output=none --set-exit-if-changed lib test
+
+echo "[pre-push] Running dart analyze..."
+fvm dart analyze
+
+echo "[pre-push] Running flutter test..."
+fvm flutter test
+

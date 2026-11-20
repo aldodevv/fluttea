@@ -1,0 +1,4 @@
+# Gitleaks ignore list
+# Test fixtures with dummy self-signed certificates
+test/fixtures/certs/localhost_key.pem:private-key:1
+

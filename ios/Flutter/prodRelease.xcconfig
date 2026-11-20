@@ -1,0 +1,5 @@
+#include "Generated.xcconfig"
+
+ASSET_PREFIX=prod
+BUNDLE_NAME=Fluttea
+BUNDLE_DISPLAY_NAME=Fluttea

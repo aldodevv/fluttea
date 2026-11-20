@@ -1,0 +1,10 @@
+# Gitleaks configuration for Fluttea
+[allowlist]
+description = "Global allowlist for build artifacts and mock test fixtures"
+paths = [
+    '''build/.*''',
+    '''\.dart_tool/.*''',
+    '''android/\.gradle/.*''',
+    '''test/fixtures/certs/.*''',
+]
+
