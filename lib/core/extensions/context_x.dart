@@ -12,7 +12,9 @@ extension ContextX on BuildContext {
 
   TextTheme get text => textTheme;
 
-  AppLocalizations get l10n => AppLocalizations.of(this);
+  AppLocalizations get l10n =>
+      Localizations.of<AppLocalizations>(this, AppLocalizations) ??
+      AppLocalizationsDelegates.fallback;
 
   AppStatusColors get statusColors => theme.extension<AppStatusColors>() ?? AppStatusColors.light;
 

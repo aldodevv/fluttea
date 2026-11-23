@@ -8,6 +8,7 @@ analyzer:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
     - "**/*.pigeon.dart"
+    - "lib/core/l10n/generated/**"
     - build/**
     - android/**
     - ios/**

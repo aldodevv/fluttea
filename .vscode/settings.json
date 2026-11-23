@@ -16,6 +16,13 @@
     "editor.wordBasedSuggestions": "off"
   },
   "files.eol": "\n",
+  "arb-editor.suppressedWarnings": [
+    "missing_metadata_for_key",
+    "missing_description"
+  ],
+  "files.associations": {
+    "*.arb": "json"
+  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {

@@ -42,7 +42,7 @@ class _AppState extends ConsumerState<App> {
       themeMode: settings.themeMode,
       locale: settings.locale,
       supportedLocales: AppLocalizations.supportedLocales,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      localizationsDelegates: AppLocalizationsDelegates.delegates,
       routerConfig: _router,
       builder: (context, child) {
         if (child == null) return const SizedBox.shrink();

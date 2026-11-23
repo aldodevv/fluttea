@@ -1,0 +1,113 @@
+{
+  "@@locale": "id",
+  "ok": "OK",
+  "cancel": "Batal",
+  "retry": "Coba Lagi",
+  "searchHint": "Cari...",
+  "loading": "Memuat data...",
+  "emptyTitle": "Tidak Ada Data",
+  "emptyMessage": "Data belum tersedia untuk saat ini.",
+  "errorTitle": "Terjadi Kesalahan",
+  "errorGeneric": "Terjadi kendala saat memuat data. Silakan coba lagi.",
+  "offlineMessage": "Koneksi internet terputus",
+  "privacyProtected": "Konten Terlindungi",
+  "splashTagline": "Template Flutter Ringkas, Aman & Tangguh",
+  "authWelcomeTitle": "Selamat Datang",
+  "authWelcomeSubtitle": "Masuk untuk melanjutkan ke {appName}",
+  "@authWelcomeSubtitle": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "authLoginButton": "Masuk",
+  "authLoginSuccess": "Login berhasil. Selamat datang!",
+  "authLoginFailed": "Autentikasi gagal. Periksa email dan password.",
+  "authEmailLabel": "Email",
+  "authEmailHint": "user@example.com",
+  "authEmailRequired": "Email tidak boleh kosong",
+  "authEmailInvalid": "Format email tidak valid",
+  "authPasswordLabel": "Password",
+  "authPasswordHint": "Minimal 6 karakter",
+  "authPasswordRequired": "Password tidak boleh kosong",
+  "authPasswordMinLength": "Password minimal 6 karakter",
+  "authFillDemo": "Isi Kredensial Demo",
+  "authOpenDevTools": "Buka DevTools Langsung",
+  "homeGreeting": "Halo, {user}!",
+  "@homeGreeting": {
+    "placeholders": {
+      "user": {
+        "type": "String"
+      }
+    }
+  },
+  "homeSettingsTooltip": "Pengaturan",
+  "homeAppSettings": "Pengaturan Aplikasi",
+  "homeOpenDevToolsHub": "Buka DevTools Hub",
+  "homeOpenUiGallery": "Buka UI Gallery",
+  "homeOpenStateExamples": "Buka State Examples",
+  "homeOpenNetworkExamples": "Buka Network & Mock Server",
+  "homeOpenSecurityShowcase": "Buka Security Showcase",
+  "settingsTitle": "Pengaturan",
+  "settingsAppearanceTitle": "Tampilan",
+  "settingsAppearanceSubtitle": "Pilih preferensi tema aplikasi",
+  "settingsThemeSystem": "Sistem",
+  "settingsThemeLight": "Terang",
+  "settingsThemeDark": "Gelap",
+  "settingsLanguageTitle": "Bahasa",
+  "settingsLanguageSubtitle": "Bahasa antarmuka aplikasi",
+  "settingsLanguageId": "Indonesia",
+  "settingsLanguageEn": "English",
+  "settingsSecurityTitle": "Keamanan & Notifikasi",
+  "settingsSecuritySubtitle": "Kelola preferensi privasi dan pemberitahuan",
+  "settingsBiometricsTitle": "Biometrik",
+  "settingsBiometricsSubtitle": "Masuk cepat dengan sidik jari atau Face ID",
+  "settingsNotificationsTitle": "Notifikasi",
+  "settingsNotificationsSubtitle": "Terima pembaruan penting dan peringatan",
+  "settingsAccountTitle": "Akun & Sesi",
+  "settingsAccountSubtitle": "Informasi akun yang sedang aktif",
+  "settingsUserFallback": "Pengguna {userId}",
+  "@settingsUserFallback": {
+    "placeholders": {
+      "userId": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsUserIdLabel": "ID: {userId}",
+  "@settingsUserIdLabel": {
+    "placeholders": {
+      "userId": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsLogoutButton": "Keluar",
+  "settingsLogoutSuccess": "Berhasil keluar",
+  "settingsNotLoggedIn": "Anda belum masuk ke akun.",
+  "settingsDeveloperTitle": "Pengembang",
+  "settingsDeveloperSubtitle": "Fitur pengujian dan utilitas internal ({envName})",
+  "@settingsDeveloperSubtitle": {
+    "placeholders": {
+      "envName": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsOpenDevToolsHub": "Buka DevTools Hub",
+  "settingsOpenUiGallery": "Komponen UI Gallery",
+  "templateTitle": "Fitur Template",
+  "templateEmptyTitle": "Belum Ada Data",
+  "templateEmptyMessage": "Data template belum dimuat.",
+  "devToolsTitle": "Fluttea DevTools",
+  "devToolsDisabledTitle": "DevTools Dinonaktifkan",
+  "devToolsDisabledMessage": "DevTools dinonaktifkan di environment production.",
+  "devToolsTabEnv": "Env",
+  "devToolsTabNetwork": "Network",
+  "devToolsTabStorage": "Storage",
+  "devToolsTabLog": "Log",
+  "devToolsTabSecurity": "Security",
+  "devToolsTabState": "State"
+}
+
